@@ -11,5 +11,19 @@ config_version=5
 [application]
 
 config/name="Swarming  shooter"
+run/main_scene="uid://b8ayldo2ij23k"
 config/features=PackedStringArray("4.5")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerInputSystem="*res://Systems/PlayerInputSystem.gd"
+
+[global_group]
+
+player=""
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
