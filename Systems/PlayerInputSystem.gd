@@ -9,7 +9,7 @@ func _physics_process(delta):
 	# print("System is running...")
 
 	var player_node = get_tree().get_first_node_in_group("player")
-	
+		
 	if player_node:
 		# DEBUG 2: We found the player!
 		var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

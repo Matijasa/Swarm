@@ -1,6 +1,10 @@
-class_name PlayerEntity # Optional, helps finding it later
+class_name PlayerEntity
 extends CharacterBody2D
 
-# The Player HAS A component.
-# We create a new instance of the data container here.
-var input_component: PlayerInputComponent = PlayerInputComponent.new()
+# Components
+var input_component = PlayerInputComponent.new()
+var weapon_component = WeaponComponent.new()
+
+func _ready():
+	# Load the bullet blueprint into the component
+	weapon_component.bullet_scene = load("res://Entities/Projectiles/Bullet.tscn")
